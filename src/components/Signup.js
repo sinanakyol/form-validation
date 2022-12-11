@@ -26,7 +26,12 @@ function Signup() {
         }) => (
           <form onSubmit={handleSubmit}>
             <label htmlFor="email">Email</label>
-            <input name="email" onChange={handleChange} onBlur={handleBlur} />
+            <input
+              name="email"
+              value={values.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
 
             {errors.email && touched.email && (
               <div className="error">{errors.email}</div>
@@ -38,6 +43,7 @@ function Signup() {
             <label htmlFor="password">Password</label>
             <input
               name="password"
+              value={values.password}
               onChange={handleChange}
               onBlur={handleBlur}
             />
@@ -52,6 +58,7 @@ function Signup() {
             <label htmlFor="passwordConfirm">Confirm Password</label>
             <input
               name="passwordConfirm"
+              value={values.passwordConfirm}
               onChange={handleChange}
               onBlur={handleBlur}
             />
